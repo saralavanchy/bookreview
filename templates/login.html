@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Reviews</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}"">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="main-root">
+        <div id="login">
+            <img src="{{ url_for('static',filename='images/sleeping.png') }}" class="image-view">
+            <h2 class="primary">BOOKSMATION </h2>
+            <di class="main-grid">
+                <div class="main-grid-item">
+                    <h4 class="my-subtitle">Welcome</h4> 
+                    <form class="px-4 py-3" method="POST" action="{{ url_for('login') }}">
+                        <div class="login-input form-group">
+                          <label for="login-user-input">Username </label>
+                          <input type="user" class="form-control" id="login-user-input" name="username" aria-describedby="username input">
+                        </div>
+                        <div class="login-input form-group">
+                          <label for="login-password-input">Password</label>
+                          <input type="password" class="form-control" name="password" id="login-password-input">
+                        </div>
+                        <div class="login-input form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-lg btn-block">LOGIN</button>
+                    </form>
+                </div>
+                <hr class="solid"></hr>
+                <div class="main-grid-item">
+                    <h4 class="my-subtitle">Don't have account? Don't problem! You can sign up here.</h4>
+                    <form class="px-4 py-3" method="POST" action="{{ url_for('signin') }}">
+                      <div>
+                        <div class="login-input form-group">
+                          <label for="login-user-input">First name</label>
+                          <input type="text" class="form-control" id="signin-small-name" placeholder="name" name="name" aria-describedby="name input">
+                        </div>
+                        <div class="login-input form-group">
+                          <label for="login-user-input">Surname</label>
+                          <input type="text" class="form-control" id="signin-small-surname" placeholder="surname" name="surname" aria-describedby="surname input">
+                        </div>
+                      </div>
+                      <div class="login-input form-group">
+                        <label for="login-user-input">Username *</label>
+                        <input type="text" class="form-control" id="signin-username" placeholder="username" name="username" aria-describedby="username input" required>
+                      </div>
+                      <div class="login-input form-group">
+                        <label for="login-user-input">Email *</label>
+                        <input type="email" class="form-control" id="signin-email" placeholder="email" name="email" aria-describedby="email" required>
+                      </div>
+                      <div class="login-input form-group">
+                        <label for="login-user-input">Password *</label>
+                        <div class="row">
+                          <div class="col">
+                            <input type="password" class="form-control" id="signin-password" name="password" placeholder="password" required>
+                          </div>
+                          <div class="col">
+                            <input type="password" class="form-control" id="signin-confirm-password" placeholder="confirm password" required>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-secondary btn-lg btn-block">SIGN UP</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>   
+    </body>
+
+</html>

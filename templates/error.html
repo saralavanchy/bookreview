@@ -1,0 +1,12 @@
+{% extends "layout-info.html" %}
+
+{% block image %}
+<img src="{{ url_for('static',filename='images/worried.png') }}" class="image-view">
+{% endblock %}
+
+{% block content %}
+    <h1 class="error-title">Oops!</h1>
+    <p class="error-body">We had a problem while we were processing the page, maybe on of ours librarians fell down throwing all the shelves... </p>
+    <p class="error-body">Your error message is : {{message}}</p>
+
+{% endblock %}

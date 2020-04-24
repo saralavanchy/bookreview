@@ -1,0 +1,11 @@
+{% extends "layout-info.html" %}
+
+{% block image %}
+<img src="{{ url_for('static',filename='images/smiling.png') }}" class="image-view">
+{% endblock %}
+
+{% block content %}
+    <h1 class="error-title">Congratulations!</h1>
+    <p class="error-body">{{message}}</p>
+
+{% endblock %}

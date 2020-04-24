@@ -1,0 +1,141 @@
+$ligth : #ae52d4;
+$primary : #7b1fa2;
+$dark: #4a0072;
+//SECONDARY COLORS
+$secondaryLigth : #8eacbb;
+$secondary : #607d8b;
+$secondaryDark :  #34515e;
+
+/*------------------------------------------------------------
+        FONTS
+------------------------------------------------------------*/
+
+.my-font {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 16 !important;
+    text-align: center;
+}
+
+.my-font-secondary {
+    @extend .my-font;
+    color: $secondary
+}
+
+.primary {
+    @extend .my-font;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 50;
+    text-align: center;
+}
+
+.error-title {
+    @extend .my-font;
+    color: $primary !important;
+    font-size: 50 !important;
+}
+
+.error-body {
+    @extend .my-font;
+    color: $primary;
+}
+
+.my-subtitle {
+    @extend .my-font;
+    color : white;
+    font-size: 22;
+    text-align: center;
+    margin-bottom: 10px !important;
+}
+
+.login-input {
+    color: white;
+}
+
+/*------------------------------------------------------------
+        IMAGES
+------------------------------------------------------------*/
+
+.image-view {
+    border-radius: 50%;
+    margin-top: 3%;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------------------------------------
+        GENERAL
+------------------------------------------------------------*/
+.main-root {
+    height: max-heigth;
+    width: 100%;
+    margin: 0px;
+    background-color: $primary; 
+    background-image: linear-gradient(to right, $dark , $ligth); 
+}
+
+.large-header {
+    @extend .main-root;
+    height: 300px !important;
+}
+
+.large-card {
+    margin-top: 0px;
+    height: 100%;
+    padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*------------------------------------------------------------
+        GRID
+------------------------------------------------------------*/
+
+.main-grid {
+    margin-top: 5%;
+    display: grid;
+    padding-right: 10%;
+    padding-left: 10%;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.main-grid-item {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/*------------------------------------------------------------
+        FORMS
+------------------------------------------------------------*/
+
+@media (max-width: 781px) {
+    hr.solid {
+        border-top: 3px solid #bbb !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        display: initial;
+      }
+}
+@media (min-width: 780px){
+    hr.solid {
+        display: none !important;
+    }
+}
+
+
+/*------------------------------------------------------------
+        FORMS
+------------------------------------------------------------*/
+form { 
+    input:invalid {
+       border-color: red;
+  }
+}
